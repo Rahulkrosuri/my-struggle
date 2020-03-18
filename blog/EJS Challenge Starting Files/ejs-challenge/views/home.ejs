@@ -1,3 +1,11 @@
-<% include('partials/header.ejs') %> 
-
-<% include('partials/footer.ejs') %> 
+<% include partials/header.ejs %> 
+    <h1>Day1</h1>
+    <p><%= content.substring(0,100) + '...' %> <a href="/posts">Read more</a></p><br><br>
+    <% posts.forEach(function(post) { %>
+     <h1><%= post.day %></h1>
+     <p><%= post.content.substring(0,100) + '...' %>
+        <a href="/posts/<%= post.day %>">Read more</a>
+       </p>
+    <% }) %>
+    <a href="/compose">Compose</a>
+<% include partials/footer.ejs %> 
