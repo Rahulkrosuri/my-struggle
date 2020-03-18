@@ -1,0 +1,10 @@
+<% include partials/header.ejs %>
+<h1>Compose</h1>
+<form action="/compose" method="POST">
+    <label for="day">Day:</label><br>
+    <input type="text" name="days" placeholder="Day" id="day"><br><br>
+    <label for="content">Content:</label><br>
+    <textarea name="contents" id="content" cols="30" rows="5" placeholder="Enter the content"></textarea><br><br>
+    <button type="submit">Publish</button>
+</form>
+<% include partials/footer.ejs %>
